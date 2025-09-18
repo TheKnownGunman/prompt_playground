@@ -11,7 +11,6 @@ import streamlit as st
 from dotenv import load_dotenv
 
 # --------- Load keys from env or Streamlit secrets ----------
-load_dotenv()
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
 ELEVENLABS_API_KEY = st.secrets.get("ELEVENLABS_API_KEY")
 
