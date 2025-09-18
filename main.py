@@ -8,7 +8,6 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 import streamlit as st
-from dotenv import load_dotenv
 
 # --------- Load keys from env or Streamlit secrets ----------
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
