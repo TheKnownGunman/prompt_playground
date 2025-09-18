@@ -10,8 +10,8 @@ from typing import List, Dict, Any
 import streamlit as st
 
 # --------- Load keys from env or Streamlit secrets ----------
-OPENAI_API_KEY = "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"
-ELEVENLABS_API_KEY = "sk_26e4f15194758ac7f0451cfc08440d035c0fb567bfeb4f32"
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
+ELEVENLABS_API_KEY = st.secrets.get("ELEVENLABS_API_KEY")
 
 # --- Safety checks (simple, friendly errors) ---
 if not OPENAI_API_KEY:
@@ -47,7 +47,7 @@ def ensure_session():
     if "voice_id" not in st.session_state:
         st.session_state.voice_id = "21m00Tcm4TlvDq8ikWAM"  # default example
     if "model_id" not in st.session_state:
-        st.session_state.model_id = "gpt-4o-mini"
+        st.session_state.model_id = "gpt-5-nano"
     if "tts_model" not in st.session_state:
         st.session_state.tts_model = "eleven_multilingual_v2"
     if "audio_format" not in st.session_state:
