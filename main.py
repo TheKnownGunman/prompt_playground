@@ -8,12 +8,10 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 import streamlit as st
-from dotenv import load_dotenv
 
 # --------- Load keys from env or Streamlit secrets ----------
-load_dotenv()
-OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
-ELEVENLABS_API_KEY = st.secrets.get("ELEVENLABS_API_KEY")
+OPENAI_API_KEY = "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"
+ELEVENLABS_API_KEY = "sk_26e4f15194758ac7f0451cfc08440d035c0fb567bfeb4f32"
 
 # --- Safety checks (simple, friendly errors) ---
 if not OPENAI_API_KEY:
